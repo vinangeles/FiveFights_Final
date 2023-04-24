@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+body {
+    font-family: 'Kanit';
+}
+.bg-img{
+    background: linear-gradient(
+        rgba(43, 4, 4, 1), 
+        rgba(43, 4, 4, 1)
+      ), url("../img/bg.jpg") no-repeat;
+      background-blend-mode: darken;
+    height: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+.nav-link{
+    color: white;
+}
+.navbar-nav > li.nav-item > a.active{
+    color: #78f1ed;
+    border-bottom: #ffffff solid 1px;
+}
+.tcolor{
+    color: #D83C3C;
+}
+.buttons > button {
+    font-family: 'Secular One', sans-serif;
+    --bs-btn-padding-x: 15px;
+    width: 250px;
+    height: 60px;
+}

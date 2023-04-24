@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+body {
+    background-color: #2B0404;
+    font-family: 'Kanit';
+    color: white;
+}
+.navbuttons button{
+    width: 90px;
+}
+.navbar {
+    height: 80px;
+    background-color: black;
+    border-bottom: #242627;
+}
+.navbar a{
+    color: white;
+}
