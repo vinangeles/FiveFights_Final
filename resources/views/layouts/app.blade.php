@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'FiveFights') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -36,8 +36,8 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto ">
                     <li class="nav-item "><a href="/" class="nav-link {{request()->is('/') ? 'active' : ''}}">Home</a></li>
-                    <li class="nav-item "><a href="#" class="nav-link {{request()->is('team') ? 'active' : ''}}">Teams</a></li>
-                    <li class="nav-item "><a href="#" class="nav-link {{request()->is('tournament') ? 'active' : ''}}">Tournaments</a></li>
+                    <li class="nav-item "><a href="/teams" class="nav-link {{request()->is('teams') ? 'active' : ''}}">Teams</a></li>
+                    <li class="nav-item "><a href="/tournaments" class="nav-link {{request()->is('tournaments') ? 'active' : ''}}">Tournaments</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -57,14 +57,14 @@
                             @endif
                         @else
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle drop active2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('profile') }}"
                                        onclick="event.preventDefault();
-                                                     document.getElementById('profile-page').submit();">
+                                                     document.getElementById('profile').submit();">
                                         {{ __('Profile') }}
                                     </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
@@ -73,6 +73,9 @@
                                         {{ __('Logout') }}
                                     </a>
 
+                                    <form id="profile" action="{{ route('profile') }}" method="GET" class="d-none">
+                                        @csrf
+                                    </form>    
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
@@ -84,7 +87,7 @@
             </div>
         </nav>
 
-        <main>
+        <main class="bg-img">
             @yield('content')
             
         </main>

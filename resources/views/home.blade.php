@@ -10,9 +10,9 @@
             <h1 style="font-size: 96px;" class="lh-1 " >Welcome to <span class="fst-italic fw-bold">Five<span class="tcolor">Fights</span></span></h1>
             <h2 style="font-family: 'Oxygen', sans-serif;" >Dedicated to creating and blossoming e-sports players and communities in the Bicol Region.</h2>
 
-            <div class="buttons lh-lg">
-                <button type="button" class="btn btn-light btn-outline-dark btn-lg mb-2 fs-3">Find a team</button> </br>
-                <button type="button" class="btn btn-light btn-outline-dark btn-lg fs-5">Enter a tournament</button>
+            <div class="lh-lg">
+                <a type="submit" role="button" class="btn btn-light btn-outline-dark btn-lg mb-1 fs-3" href="/teams">Find a team</a> </br>
+                <a type="submit" role="button" class="btn btn-light btn-outline-dark btn-lg fs-5" href="/tournaments">Enter a tournament</a>
             </div>
         </div>
 </div>

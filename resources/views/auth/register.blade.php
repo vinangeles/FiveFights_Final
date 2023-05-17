@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container-fluid vh-100 align-items-center">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="logCard card position-relative top-50 start-25">
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
